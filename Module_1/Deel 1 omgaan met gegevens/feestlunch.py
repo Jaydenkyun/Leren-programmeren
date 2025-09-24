@@ -1,15 +1,15 @@
 
 from termcolor import colored, cprint, COLORS
 
-prijs_croissantje (input = float) ("hoeveel kost een croissant?")
-prijs_stokbroden = 2.78
-kortingsbon = -0.50
+prijs_croissantje = float(input ("hoeveel kost een croissant?"))
+prijs_stokbroden = float(input ("hoeveel kost een stokbrood?"))
+kortingsbon = float(input ("hoeveel korting geeft een kortingbon in euro's."))
 
-aantalcroisant = input ("hoeveel croissanten?\n")
-aantalstokbrood = input ("hoeveel stokbroden?\n")
-aantalkortingsbonnen = input ("hoeveel kortingsbonnen\n")
+aantalcroisant = int(input ("hoeveel croissanten?\n"))
+aantalstokbrood = int(input ("hoeveel stokbroden?\n"))
+aantalkortingsbonnen = int(input ("hoeveel kortingsbonnen\n"))
 
-kost = (prijs_croissantje * aantalcroisant) + (prijs_stokbroden * aantalstokbrood) + (kortingsbon * aantalkortingsbonnen)
+kost = (prijs_croissantje * aantalcroisant) + (prijs_stokbroden * aantalstokbrood) - (kortingsbon * aantalkortingsbonnen)
 
 print (f"De feestlunch kost je bij de bakker {colored(kost, 'green')} euro voor de {colored(aantalcroisant, 'red')} croissantjes en de {colored(aantalstokbrood, 'blue')} stokbroden als de {colored(aantalkortingsbonnen, 'yellow')} kortingsbonnen nog geldig zijn!")
 
