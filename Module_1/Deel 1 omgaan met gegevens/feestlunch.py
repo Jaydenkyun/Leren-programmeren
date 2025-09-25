@@ -1,9 +1,9 @@
 
 from termcolor import colored, cprint, COLORS
 
-prijs_croissantje = float(input ("hoeveel kost een croissant?"))
-prijs_stokbroden = float(input ("hoeveel kost een stokbrood?"))
-kortingsbon = float(input ("hoeveel korting geeft een kortingbon in euro's."))
+prijs_croissantje = float(input ("hoeveel kost een croissant?\n"))
+prijs_stokbroden = float(input ("hoeveel kost een stokbrood?\n"))
+kortingsbon = float(input ("hoeveel korting geeft een kortingbon in eurocent.\n"))
 
 aantalcroisant = int(input ("hoeveel croissanten?\n"))
 aantalstokbrood = int(input ("hoeveel stokbroden?\n"))
