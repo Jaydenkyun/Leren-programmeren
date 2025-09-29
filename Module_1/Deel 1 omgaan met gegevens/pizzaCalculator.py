@@ -4,15 +4,13 @@ small_pizza_prijs = 6.50
 medium_pizza_prijs = 9.30
 large_pizza_prijs = 11.10
 
+pizza_aantal_small = int(input("hoeveel small pizza's wilt u\n"))
+pizza_aantal_medium = int(input("hoeveel medium pizza's wilt u\n"))
+pizza_aantal_large = int(input("hoeveel large pizza's wilt u\n"))
 
-
-pizza_aantal_small = float(input("hoeveel small pizza's wilt u\n"))
-pizza_aantal_medium = float(input("hoeveel medium pizza's wilt u\n"))
-pizza_aantal_large = float(input("hoeveel large pizza's wilt u\n"))
-
-pizza_small_kosten = (small_pizza_prijs) * (pizza_aantal_small)
-pizza_medium_kosten = (medium_pizza_prijs) * (pizza_aantal_medium)
-pizza_large_kosten = (large_pizza_prijs) * (pizza_aantal_large)
+pizza_small_kosten = small_pizza_prijs * pizza_aantal_small
+pizza_medium_kosten = medium_pizza_prijs * pizza_aantal_medium
+pizza_large_kosten = large_pizza_prijs * pizza_aantal_large
 
 (pizza_kosten_totaal) = (pizza_small_kosten) + (pizza_medium_kosten) + (pizza_large_kosten)
 
