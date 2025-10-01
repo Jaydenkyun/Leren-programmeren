@@ -23,3 +23,5 @@ elif cijfer > 0:
     print(f"jammer, zeer slecht je resultaat is {cijfer}")
 else:
  print("dit kan ik niet omzetten")
+
+ #bhodi had tegen mij gezegd dat ik maar een variabele kon gebruiken dus dat het ik gedaan.
