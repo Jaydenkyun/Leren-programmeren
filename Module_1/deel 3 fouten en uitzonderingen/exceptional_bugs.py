@@ -9,9 +9,9 @@ number = input('Weet jij wat '+num1+'+'+num2+' is? ')
 
 #geef reactie op het antwoord
 try:
-    if int(number == num1-num2):
+    if int(number == num1+num2):
         print('Dat is juist')
-    elif int(number != num1-num2):
+    else:
         print('Nee dat klopt niet')
-    except:
+except:
         print('Dat is geen nummer!')
