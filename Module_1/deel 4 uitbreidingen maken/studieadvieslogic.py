@@ -5,21 +5,21 @@ print(STUDIEDOKTER_TITEL)
 OPTIES = "Kies 0: altijd; 1: vaak; 2: regelmatig; 3: soms; 4: nooit"
 input_AANTAL_WEKEN_VRAAG = int(input(f'{AANTAL_WEKEN_VRAAG}\n'))
 print (OPTIES)
-input_COMPETENTIE_STELLING_1 = input(f'{COMPETENTIE_STELLING_1}\n')
+input_COMPETENTIE_STELLING_1 = int(input(f'{COMPETENTIE_STELLING_1}\n'))
 print (OPTIES)
-input_COMPETENTIE_STELLING_2 = input(f'{COMPETENTIE_STELLING_2}\n')
+input_COMPETENTIE_STELLING_2 = int(input(f'{COMPETENTIE_STELLING_2}\n'))
 print (OPTIES)
-input_COMPETENTIE_STELLING_3 = input(f'{COMPETENTIE_STELLING_3}\n')
+input_COMPETENTIE_STELLING_3 = int(input(f'{COMPETENTIE_STELLING_3}\n'))
 print (OPTIES)
-input_COMPETENTIE_STELLING_4 = input(f'{COMPETENTIE_STELLING_4}\n')
+input_COMPETENTIE_STELLING_4 = int(input(f'{COMPETENTIE_STELLING_4}\n'))
 print (OPTIES)
-input_COMPETENTIE_STELLING_5 = input(f'{COMPETENTIE_STELLING_5}\n')
+input_COMPETENTIE_STELLING_5 = int(input(f'{COMPETENTIE_STELLING_5}\n'))
 
 if input_AANTAL_WEKEN_VRAAG >= 10:
     print (OPTIES)
-    input_COMPETENTIE_STELLING_6 = input(f'{COMPETENTIE_STELLING_6}\n')
+    input_COMPETENTIE_STELLING_6 = int(input(f'{COMPETENTIE_STELLING_6}\n'))
     print (OPTIES)
-    input_COMPETENTIE_STELLING_7 = input(f'{COMPETENTIE_STELLING_7}\n')
+    input_COMPETENTIE_STELLING_7 = int(input(f'{COMPETENTIE_STELLING_7}\n'))
 
 
 zorgelijk_punten = 0
