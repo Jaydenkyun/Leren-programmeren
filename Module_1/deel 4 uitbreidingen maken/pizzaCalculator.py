@@ -14,14 +14,14 @@ while True:
 
 while True:
     try:
-        pizza_aantal_medium = int(input("hoeveel small pizza's wilt u\n"))
+        pizza_aantal_medium = int(input("hoeveel medium pizza's's wilt u\n"))
         break
     except ValueError:
         print("dat is geen heel getal probeer opnieuw! ")
 
 while True:
     try:
-        pizza_aantal_large = int(input("hoeveel small pizza's wilt u\n"))
+        pizza_aantal_large = int(input("hoeveel large pizza's wilt u\n"))
         break
     except ValueError:
         print("dat is geen heel getal probeer opnieuw! ")
