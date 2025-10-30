@@ -26,41 +26,41 @@ zorgelijk_punten = 0
 twijfelachtig_punten = 0
 
 if input_COMPETENTIE_STELLING_1 <= 1:
-    zorgelijk_punten =+1
-    twijfelachtig_punten =+1
+    zorgelijk_punten +=1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_2 <= 1:
-    zorgelijk_punten =+1
-    twijfelachtig_punten =+1
+    zorgelijk_punten +=1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_3 <= 1:
-    zorgelijk_punten =+1
-    twijfelachtig_punten =+1
+    zorgelijk_punten +=1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_4 <= 1:
-    zorgelijk_punten =+1
-    twijfelachtig_punten =+1
+    zorgelijk_punten +=1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_5 <= 1:
-    zorgelijk_punten =+1
-    twijfelachtig_punten =+1
+    zorgelijk_punten +=1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_6 <= 1:
-    zorgelijk_punten =+1
-    twijfelachtig_punten =+1
+    zorgelijk_punten +=1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_7 <= 1:
-    zorgelijk_punten =+1
-    twijfelachtig_punten =+1
+    zorgelijk_punten +=1
+    twijfelachtig_punten +=1
 
 if input_COMPETENTIE_STELLING_1 == 2:
-    twijfelachtig_punten =+1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_2 == 2:
-    twijfelachtig_punten =+1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_3 == 2:
-    twijfelachtig_punten =+1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_4 == 2:
-    twijfelachtig_punten =+1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_5 == 2:
-    twijfelachtig_punten =+1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_6 == 2:
-    twijfelachtig_punten =+1
+    twijfelachtig_punten +=1
 if input_COMPETENTIE_STELLING_7 == 2:
-    twijfelachtig_punten =+1
+    twijfelachtig_punten +=1
 
 
 if input_AANTAL_WEKEN_VRAAG >=10:
@@ -69,6 +69,8 @@ else:
     GEMIDDELDE_SCORE = int(input_COMPETENTIE_STELLING_1 + input_COMPETENTIE_STELLING_2 + input_COMPETENTIE_STELLING_3 + input_COMPETENTIE_STELLING_4 + input_COMPETENTIE_STELLING_5)/5
 
 print (COMPETENTIE_ADVIES_TITEL)
+print(twijfelachtig_punten)
+print(zorgelijk_punten)
 
 if GEMIDDELDE_SCORE <= 2 or zorgelijk_punten >= 4:
     print(COMPETENTIE_ADVIES_ZORGELIJK)
