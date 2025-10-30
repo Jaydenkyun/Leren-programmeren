@@ -7,7 +7,7 @@ num2 = random.randint(5,15)
 #vraag om een antwoord
 try:
      
-    number = int(input(f'Weet jij wat {num1} + {num2} is? '))
+    number = int (input(f'Weet jij wat {num1} + {num2} is? '))
 
     #geef reactie op het antwoord
 
@@ -18,4 +18,5 @@ try:
 
 except ValueError:
     print('Dat is geen nummer!')
-
+except:
+    print('er ging iets fout!')
