@@ -16,5 +16,5 @@ try:
         minimum = nr1
         maximum = nr2
     print(f"Het minimum is: {minimum} en het maximimum is: {maximum}")
-except ValueError:
+except:
     print("dit kan niet")
