@@ -9,7 +9,7 @@ sleutel = False
 
 som_getal_1 =random.randint(10,25)
 som_getal_2 =random.randint(-5,75)
-operator_list = ["+","-","x"]
+operator_list = ["+","-","*"]
 operator = random.choice(operator_list)
 
 # === [kamer 1] === #
