@@ -53,6 +53,7 @@ else:
     player_attack_amount = math.ceil(zombie_health / player_hit_damage)
 
     if player_attack_amount < zombie_attack_amount:
+        player_health -= zombie_attack * zombie_attack_amount
         print(f'In {player_attack_amount} rondes versla je de zombie.')
         print(f'Je health is nu {player_health}.')
     else:
@@ -103,6 +104,7 @@ else:
     player_attack_amount = math.ceil(BOSS_zombie_health / player_hit_damage)
 
     if player_attack_amount < BOSS_zombie_attack_amount:
+        player_health -= zombie_attack * zombie_attack_amount
         print(f'In {player_attack_amount} rondes versla je de zombie.')
         print(f'Je health is nu {player_health}.')
     else:
