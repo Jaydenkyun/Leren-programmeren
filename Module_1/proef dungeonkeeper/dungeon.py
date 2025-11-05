@@ -8,7 +8,7 @@ player_health = 3
 
 som_getal_1 =random.randint(10,25)
 som_getal_2 =random.randint(-5,75)
-operator_list = ["+","-","+"]
+operator_list = ["+","-","x"]
 operator = random.choice(operator_list)
 
 # === [kamer 1] === #
@@ -23,9 +23,9 @@ print('Je stapt door de deur heen en je ziet een standbeeld voor je.')
 print('Het standbeeld heeft een sleutel vast.')
 print('Op zijn borst zit een numpad met de toesten 9 t/m 0.')
 print(f"Daarboven zie je een som staan {som_getal_1} {operator} {som_getal_2} =")
-antwoord = int(input('Wat toets je in?'))
+antwoord = int(input('Wat toets je in?\n'))
 
-if antwoord == (som_getal_1) (operator) (som_getal_2):
+if antwoord == eval(f"{som_getal_1}{operator}{som_getal_2}"):
     print('Het stadbeeld laat de sleutel vallen en je pakt het op')
 else:
     print('Er gebeurt niets....')
