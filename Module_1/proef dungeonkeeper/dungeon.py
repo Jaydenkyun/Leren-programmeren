@@ -64,6 +64,7 @@ zombie_health = 2
 print(f'Dapper loop je de kamer binnen.')
 print('Je loopt tegen een zombie aan.')
 
+
 zombie_hit_damage = (zombie_attack - player_defense)
 if zombie_hit_damage <= 0:
     print('Jij hebt een te goede verdediging voor de zombie, hij kan je geen schade doen.')
@@ -99,9 +100,9 @@ time.sleep(1)
 
 
 # === [kamer 4] === #
-BOSS_zombie_attack = 1
+BOSS_zombie_attack = 2
 BOSS_zombie_defense = 0
-BOSS_zombie_health = 2
+BOSS_zombie_health = 3
 print(f'Dapper loop je de kamer binnen met jouw nieuwe {item}.')
 print('Je loopt tegen een zombie aan.')
 
