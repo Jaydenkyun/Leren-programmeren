@@ -1,8 +1,15 @@
-import time, math
+import time, math, random
 
 player_attack = 1
 player_defense = 0
 player_health = 3
+
+
+
+som_getal_1 =random.randint(10,25)
+som_getal_2 =random.randint(-5,75)
+operator_list = ["+","-","+"]
+operator = random.choice(operator_list)
 
 # === [kamer 1] === #
 print('Door de twee grote deuren loop je een gang binnen.')
@@ -15,10 +22,10 @@ time.sleep(1)
 print('Je stapt door de deur heen en je ziet een standbeeld voor je.')
 print('Het standbeeld heeft een sleutel vast.')
 print('Op zijn borst zit een numpad met de toesten 9 t/m 0.')
-print('Daarboven zie je een som staan 11+15=?')
-antwoord = int(input('Wat toest je in?'))
+print(f"Daarboven zie je een som staan {som_getal_1} {operator} {som_getal_2} =")
+antwoord = int(input('Wat toets je in?'))
 
-if antwoord == 26:
+if antwoord == (som_getal_1) (operator) (som_getal_2):
     print('Het stadbeeld laat de sleutel vallen en je pakt het op')
 else:
     print('Er gebeurt niets....')
@@ -47,7 +54,7 @@ print('Je loopt tegen een zombie aan.')
 
 zombie_hit_damage = (zombie_attack - player_defense)
 if zombie_hit_damage <= 0:
-    print('Jij hebt een te goede verdedigign voor de zombie, hij kan je geen schade doen.')
+    print('Jij hebt een te goede verdediging voor de zombie, hij kan je geen schade doen.')
 else:
     zombie_attack_amount = math.ceil(player_health / zombie_hit_damage)
     
