@@ -3,6 +3,7 @@ import time, math, random
 player_attack = 1
 player_defense = 0
 player_health = 3
+sleutel = False
 
 
 
@@ -27,6 +28,7 @@ antwoord = int(input('Wat toets je in?\n'))
 
 if antwoord == eval(f"{som_getal_1}{operator}{som_getal_2}"):
     print('Het stadbeeld laat de sleutel vallen en je pakt het op')
+    sleutel = True
 else:
     print('Er gebeurt niets....')
 
@@ -35,8 +37,13 @@ print('')
 time.sleep(1)
 
 # === [kamer 3] === #
-item = 'schild'
-player_defense += 1
+lootpool_kamer3 = ["schild","zwaard"]
+item = random.choice(lootpool_kamer3)
+if item == ("schild"):
+    player_defense += 1
+else:
+    player_attack +=2
+
 
 print('Je duwt hem open en stap een hele lange kamer binnen.')
 print(f'In deze kamer staat een tafel met daarop een {item}.')
