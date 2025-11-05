@@ -82,3 +82,8 @@ time.sleep(1)
 print('Voorzichtig open je de deur, je wilt niet nog een zombie tegenkomen.')
 print('Tot je verbazig zie je een schatkist in het midden van de kamer staan.')
 print('Je loopt er naartoe.')
+
+if sleutel == True:
+    print("je opent de kist en hebt gewonnen!!!")
+else:
+    print("je kan de kist niet openen dus je hebt verloren")
