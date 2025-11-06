@@ -135,7 +135,7 @@ else:
     elif shop_items_keuze == "beide":
         player_rupee_amount -= 2
         player_defense += 1
-        player_attack_amount += 2
+        player_attack += 2
     elif shop_items_keuze == "geen":
         player_attack += 0
         print("je koopt niets en bent nu officieël een jood")
