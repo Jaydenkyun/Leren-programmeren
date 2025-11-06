@@ -96,6 +96,7 @@ else:
     player_attack += 0
 
 # === [kamer 4] === #
+
 boss_attack = 2
 boss_defense = 0
 boss_health = 3
