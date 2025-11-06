@@ -31,7 +31,7 @@ else:
     print('Er gebeurt niets....')
 
 print('Je zie een 2 deuren achter het standbeeld.')
-print('deur 1 lijd naar kamer 6 en deur 2 lijd naar kamer 3')
+print('deur 1 lijd naar de kamer achter het standbeeld en deur 2 lijd naar de kamer rechts van jouw')
 deur_keuze = input('welke deur kies je?')
 print('')
 time.sleep(1)
