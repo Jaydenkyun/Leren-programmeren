@@ -3,6 +3,7 @@ import time, math, random
 player_attack = 1
 player_defense = 0
 player_health = 3
+player_rupee_amount = 0
 sleutel = False
 # === [kamer 1] === #
 print('Door de twee grote deuren loop je een gang binnen.')
@@ -10,6 +11,13 @@ print('Het ruikt hier muf en vochtig.')
 print('Je ziet een deur voor je.')
 print('')
 time.sleep(1)
+
+# === [kamer 7] === #
+print("je loopt een nieuwe kamer in.")
+print("je kijkt de kamer rond en ziet een rupee op de grond liggen")
+print("je pakt de ruppee op")
+player_rupee_amount += 1
+print("verderop zie je een deur")
 
 # === [kamer 2] === #
 
