@@ -36,7 +36,7 @@ deur_keuze = input('welke deur kies je?')
 print('')
 time.sleep(1)
 
-if deur_keuze == 1:
+if deur_keuze == "1":
    # === [kamer 6] === #
    zombie_attack = 1
    zombie_defense = 0
@@ -60,8 +60,8 @@ if deur_keuze == 1:
     else:
         print('Helaas is de zombie te sterk voor je.')
         print('Game over.')
-print('')
-time.sleep(1)
+    print('')
+    time.sleep(1)
 
 
 
@@ -82,9 +82,9 @@ print('')
 time.sleep(1)
 
 # === [kamer 4] === #
-boss_attack = 1
+boss_attack = 2
 boss_defense = 0
-boss_health = 2
+boss_health = 3
 print(f'Dapper loop je de kamer binnen met je nieuwe {item}.')
 print('Je ziet de dungeon boss staan.')
 
@@ -115,6 +115,6 @@ print('Tot je verbazig zie je een schatkist in het midden van de kamer staan.')
 print('Je loopt er naartoe.')
 
 if sleutel == True:
-    print ("jippie je hebt gewonnen")
+    print ("je opent de kist en je hebt gewonnen!!!")
 else:
-    print ("ga terug om die sleutel te haalen raar aapje")
+    print ("je hebt geen sleutel dus je kan de kist niet openen en ook niet winnen")
