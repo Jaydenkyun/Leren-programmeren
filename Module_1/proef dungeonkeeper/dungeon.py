@@ -75,25 +75,31 @@ if deur_keuze == "1":
 
 
 # === [kamer 3] === #
-lootpool_room3 = ["schild", "zwaard"]
-item = random.choice(lootpool_room3)
-if item == "schild":
-    player_defense += 1
-else:
-    player_attack += 2
+
 
 print('Je stapt een hele lange kamer binnen.')
-print(f'In deze kamer staat een tafel met daarop een {item}.')
-print(f'Je pakt het {item} op en houd het bij je.')
+print(f'In deze kamer staat een tafel met daarop een bord waarop staat zwaard en schild te koop.')
+print(f'Achter het bord staat een goblin die aan jouw vraagt of jij iets zou willen kopen.')
+print("je krijgt de kans om wat te komen van jouw ene rupee en toevallig kost het zwaard een rupee en het schild een rupee dus je krijgt de keus: koop jij het zwaard? koop jij het schild? of koop je helemaal niets en loop je door?")
+shop_items_keuze = input("typ: (schild) of (zwaard) of (geen) als je geen wapen wilt kopen ")
 print('Op naar de volgende deur.')
 print('')
 time.sleep(1)
+
+if shop_items_keuze == "schild":
+    player_rupee_amount -= 1
+    player_defense += 1
+elif shop_items_keuze == "zwaard":
+    player_rupee_amount -= 1
+    player_attack += 2
+else:
+    player_attack += 0
 
 # === [kamer 4] === #
 boss_attack = 2
 boss_defense = 0
 boss_health = 3
-print(f'Dapper loop je de kamer binnen met je nieuwe {item}.')
+print(f'Dapper loop je de kamer binnen met je nieuwe {shop_items_keuze}.')
 print('Je ziet de dungeon boss staan.')
 
 boss_hit_damage = (boss_attack - player_defense)
