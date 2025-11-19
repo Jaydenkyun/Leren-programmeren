@@ -13,13 +13,19 @@ print('')
 time.sleep(1)
 
 # === [kamer 7] === #
+ruppee_kans = random.randint(1,10)
 print("je loopt een nieuwe kamer in.")
-print("je kijkt de kamer rond en ziet een rupee op de grond liggen")
-print("je pakt de ruppee op")
-player_rupee_amount += 1
-print("verderop zie je een deur links van je en er is een deur rechts van je ")
-print("pak je de deur links voor je of de deur rechts van je")
-deur_keuze1 = input("kies je de deur links van je typ(1) kies je de deur rechts van je typ(2)")
+if ruppee_kans ==2:
+    print("verderop zie je een deur links van je en er is een deur rechts van je ")
+    print("pak je de deur links voor je of de deur rechts van je")
+    deur_keuze1 = input("kies je de deur links van je typ(1) kies je de deur rechts van je typ(2)")
+
+else:
+    print("je ziet een rupee op de grond liggen en pakt hem op")
+    player_rupee_amount += 1
+    print("verderop zie je een deur links van je en er is een deur rechts van je ")
+    print("pak je de deur links voor je of de deur rechts van je")
+    deur_keuze1 = input("kies je de deur links van je typ(1) kies je de deur rechts van je typ(2)")
 
 if deur_keuze1 == "1":
 
@@ -37,8 +43,8 @@ if deur_keuze1 == "1":
     antwoord = int(input('Wat toets je in?'))
 
     if antwoord == eval(f"{som_getal_1}{operator}{som_getal_2}"):
-        print('Het stadbeeld laat de sleutel vallen en je pakt het op')
-        sleutel = True
+        print('Het stadbeeld laat een rupee vallen en je pakt het op')
+        player_rupee_amount +=1
     else:
         print('Er gebeurt niets....')
 
@@ -103,10 +109,17 @@ if deur_keuze1 == "1":
     print(f'In deze kamer staat een tafel met daarop een bord waarop staat zwaard en schild te koop.')
     print(f'Achter het bord staat een goblin die aan jouw vraagt of jij iets zou willen kopen.')
     print("je krijgt de kans om wat te komen van jouw ene rupee en toevallig kost het zwaard een rupee en het schild een rupee dus je krijgt de keus: koop jij het zwaard? koop jij het schild? of koop je helemaal niets en loop je door?")
-    if player_rupee_amount == 1:
+    if player_rupee_amount == 0:
+        print("het zit er naaruit dat jij geeen rupees hebt en dus ook niets kunt kopen")
+
+    elif player_rupee_amount == 1:
         shop_items_keuze = input("typ: (schild) of (zwaard) of (geen) als je geen wapen wilt kopen")
-    else:
-        shop_items_keuze = input("typ: (schild) of (zwaard) of (beide) of (geen) als je geen wapen wilt kopen")
+    elif player_rupee_amount == 2:
+        shop_items_keuze = input("typ: (schild) of (zwaard) of (zwaard en schild) of (sleutel) of (geen) als je geen wapen wilt kopen")
+    elif player_rupee_amount == 3:
+        shop_items_keuze = input("typ: (schild) of (zwaard) of (zwaard en schild) of (sleutel) of (geen) als je geen wapen wilt kopen")
+    elif player_rupee_amount == 4:
+        shop_items_keuze = input("typ: (schild) of (zwaard) of (zwaard en schild) of (sleutel) of (alles) of (geen) als je geen wapen wilt kopen")
     
     print('Op naar de volgende deur.')
     print('')
@@ -122,6 +135,14 @@ if deur_keuze1 == "1":
         player_rupee_amount -= 2
         player_defense += 1
         player_attack_amount += 2
+    elif shop_items_keuze == "sleutel":
+        player_rupee_amount -= 2
+        sleutel = True
+    elif shop_items_keuze == "alles":
+        player_rupee_amount -=4
+        player_defense += 1
+        player_attack_amount +=2
+        sleutel = True
     else:
         shop_items_keuze == "geen"
         player_attack += 0
@@ -149,33 +170,48 @@ else:
         print(f"dat is nou jammer een {dobbelsteen_uitkomst} en hij steekt jouw in je zij een verdwijnt")
         
     # === [kamer 3] === #
-    print("je loopt door en")
-    print('Je stapt een hele lange kamer binnen.')
-    print(f'In deze kamer staat een tafel met daarop een bord waarop staat zwaard en schild te koop.')
-    print(f'Achter het bord staat een goblin die aan jouw vraagt of jij iets zou willen kopen.')
-    print("je krijgt de kans om wat te komen van jouw ene rupee en toevallig kost het zwaard een rupee en het schild een rupee dus je krijgt de keus: koop jij het zwaard? koop jij het schild? of koop je helemaal niets en loop je door?")
-    if player_rupee_amount == 1:
-        shop_items_keuze = input("typ: (schild) of (zwaard) of (geen) als je geen wapen wilt kopen")
-    else:
-        shop_items_keuze = input("typ: (schild) of (zwaard) of (beide) of (geen) als je geen wapen wilt kopen\n")
-    
-    print('Op naar de volgende deur.')
-    print('')
-    time.sleep(1)
+print('Je stapt een hele lange kamer binnen.')
+print(f'In deze kamer staat een tafel met daarop een bord waarop staat zwaard en schild te koop.')
+print(f'Achter het bord staat een goblin die aan jouw vraagt of jij iets zou willen kopen.')
+print("je krijgt de kans om wat te komen van jouw ene rupee en toevallig kost het zwaard een rupee en het schild een rupee dus je krijgt de keus: koop jij het zwaard? koop jij het schild? of koop je helemaal niets en loop je door?")
+if player_rupee_amount == 0:
+    print("het zit er naaruit dat jij geeen rupees hebt en dus ook niets kunt kopen")
 
-    if shop_items_keuze == "schild":
-        player_rupee_amount -= 1
-        player_defense += 1
-    elif shop_items_keuze == "zwaard":
-        player_rupee_amount -= 1
-        player_attack += 2
-    elif shop_items_keuze == "beide":
-        player_rupee_amount -= 2
-        player_defense += 1
-        player_attack += 2
-    elif shop_items_keuze == "geen":
-        player_attack += 0
-        print("je koopt niets en bent nu officieël een jood")
+elif player_rupee_amount == 1:
+    shop_items_keuze = input("typ: (schild) of (zwaard) of (geen) als je geen wapen wilt kopen")
+elif player_rupee_amount == 2:
+    shop_items_keuze = input("typ: (schild) of (zwaard) of (zwaard en schild) of (sleutel) of (geen) als je geen wapen wilt kopen")
+elif player_rupee_amount == 3:
+    shop_items_keuze = input("typ: (schild) of (zwaard) of (zwaard en schild) of (sleutel) of (geen) als je geen wapen wilt kopen")
+elif player_rupee_amount == 4:
+    shop_items_keuze = input("typ: (schild) of (zwaard) of (zwaard en schild) of (sleutel) of (alles) of (geen) als je geen wapen wilt kopen")
+    
+print('Op naar de volgende deur.')
+print('')
+time.sleep(1)
+
+if shop_items_keuze == "schild":
+    player_rupee_amount -= 1
+    player_defense += 1
+elif shop_items_keuze == "zwaard":
+    player_rupee_amount -= 1
+    player_attack += 2
+elif shop_items_keuze == "beide":
+    player_rupee_amount -= 2
+    player_defense += 1
+    player_attack_amount += 2
+elif shop_items_keuze == "sleutel":
+    player_rupee_amount -= 2
+    sleutel = True
+elif shop_items_keuze == "alles":
+    player_rupee_amount -=4
+    player_defense += 1
+    player_attack_amount +=2
+    sleutel = True
+else:
+    shop_items_keuze == "geen"
+    player_attack += 0
+    print("je koopt niets en bent nu officieël een jood")
 # === [kamer 4] === #
 
 boss_attack = 2
