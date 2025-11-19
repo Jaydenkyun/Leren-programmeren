@@ -102,10 +102,11 @@ if deur_keuze1 == "1":
     elif dobbelsteen_uitkomst < 7:
         player_health -= 1
         print(f"dat is nou jammer een {dobbelsteen_uitkomst} en hij steekt jouw in je zij een verdwijnt")
+        time.sleep(1)
 
         # === [kamer 9] === #
         altaar_lijst =["schild"," hart "]
-        altaar_kans = random.choice (altaar_lijst)
+        altaar_kans = random.choice(altaar_lijst)
     print("je stapt een donkere kamer binnen met een altaar in het midden dat licht geeft")
     print("je legt jouw hand op het altaar en het begint heftiger te schijnen ")
     print(f"er begint een vorm van een {altaar_kans} te vormen op het altaar ")
@@ -184,6 +185,7 @@ else:
     elif dobbelsteen_uitkomst < 7:
         player_health -= 1
         print(f"dat is nou jammer een {dobbelsteen_uitkomst} en hij steekt jouw in je zij een verdwijnt")
+        time.sleep(1)
 
         # === [kamer 9] === #
         altaar_lijst =["schild"," hart "]
@@ -196,6 +198,7 @@ else:
         player_defense += 1
     else:
         print("je wordt betoverd en jouw gezondheid is verhoogd")
+    time.sleep(1)
 
         
     # === [kamer 3] === #
@@ -241,6 +244,8 @@ else:
     shop_items_keuze == "geen"
     player_attack += 0
     print("je koopt niets en bent nu officieël een jood")
+    time.sleep(1)
+
 # === [kamer 4] === #
 
 boss_attack = 2
