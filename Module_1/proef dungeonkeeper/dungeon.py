@@ -17,9 +17,9 @@ print("je loopt een nieuwe kamer in.")
 print("je kijkt de kamer rond en ziet een rupee op de grond liggen")
 print("je pakt de ruppee op")
 player_rupee_amount += 1
-print("verderop zie je een deur en er is een deur rechts van je ")
-print("pak je de deur recht voor je of de deur rechts van je")
-deur_keuze1 = input("kies je de deur voor je typ(1) kies je de deur rechts van je typ(2)")
+print("verderop zie je een deur links van je en er is een deur rechts van je ")
+print("pak je de deur links voor je of de deur rechts van je")
+deur_keuze1 = input("kies je de deur links van je typ(1) kies je de deur rechts van je typ(2)")
 
 if deur_keuze1 == "1":
 
@@ -75,7 +75,25 @@ if deur_keuze1 == "1":
             print('')
             time.sleep(1)
 
-
+    dobbelsteen_uitkomst = random.randint(2,12)
+    print("je komt een nieuwe kamer.")
+    print("in deze kamer staat een goblin in kleermakers zit op de vloer en hij grijnst naar je.")
+    print("hij zegt dat hij de Gamble goblin heet en hij zegt dat jouw leven in zijn handen zit.")
+    print("vervolgens pakt hij twee zeszijdige dobbelstenen uit zijn zak en zegt als jij hoger dan zeven gooit dan krijg jij een extra ruppee")
+    print("maar als jij lager dan zeven gooit dan mag ik jouw een keertje steken met een grijns 0^0")
+    print("je pakt de dobbelstenen en rolt ze over de grond heen")
+    if dobbelsteen_uitkomst == 7:
+        print("de goblin kijkt geschokt en zegt EEN ZEVEN DAT IS NIET DE BEDOELING hij begint te tweaken.")
+        print("hij sprint op jouw af met een mes en jij ontwijkt zijn aanval en slaat hem hard op zijn achterhoofd.")
+        print("hij despawned en hij dropt een Ruppee en een healt potion jij neemt de ruppee mee en de healt potion in en loopt verder")
+        player_rupee_amount +=1
+        player_health +=4
+    elif dobbelsteen_uitkomst > 7:
+        print(f"je rolt een {dobbelsteen_uitkomst} en de goblin zegt goed dan en hij geeft jouw een ruppee")
+        player_rupee_amount += 1
+    elif dobbelsteen_uitkomst < 7:
+        player_health -= 1
+        print(f"dat is nou jammer een {dobbelsteen_uitkomst} en hij steekt jouw in je zij een verdwijnt")
 
 
         # === [kamer 3] === #
@@ -88,7 +106,7 @@ if deur_keuze1 == "1":
     if player_rupee_amount == 1:
         shop_items_keuze = input("typ: (schild) of (zwaard) of (geen) als je geen wapen wilt kopen")
     else:
-        shop_items_keuze = input("typ: (schild) of (zwaard) of (bijde) of (geen) als je geen wapen wilt kopen")
+        shop_items_keuze = input("typ: (schild) of (zwaard) of (beide) of (geen) als je geen wapen wilt kopen")
     
     print('Op naar de volgende deur.')
     print('')
@@ -110,9 +128,28 @@ if deur_keuze1 == "1":
         print("je koopt niets en bent nu officieël een jood")
 else:
     # === [kamer 8] === #
-
+    dobbelsteen_uitkomst = random.randint(2,12)
+    print("je komt een nieuwe kamer.")
+    print("in deze kamer staat een goblin in kleermakers zit op de vloer en hij grijnst naar je.")
+    print("hij zegt dat hij de Gamble goblin heet en hij zegt dat jouw leven in zijn handen zit.")
+    print("vervolgens pakt hij twee zeszijdige dobbelstenen uit zijn zak en zegt als jij hoger dan zeven gooit dan krijg jij een extra ruppee")
+    print("maar als jij lager dan zeven gooit dan mag ik jouw een keertje steken met een grijns 0^0")
+    print("je pakt de dobbelstenen en rolt ze over de grond heen")
+    if dobbelsteen_uitkomst == 7:
+        print("de goblin kijkt geschokt en zegt EEN ZEVEN DAT IS NIET DE BEDOELING hij begint te tweaken.")
+        print("hij sprint op jouw af met een mes en jij ontwijkt zijn aanval en slaat hem hard op zijn achterhoofd.")
+        print("hij despawned en hij dropt een Ruppee en een healt potion jij neemt de ruppee mee en de healt potion in en loopt verder")
+        player_rupee_amount +=1
+        player_health +=4
+    elif dobbelsteen_uitkomst > 7:
+        print(f"je rolt een {dobbelsteen_uitkomst} en de goblin zegt goed dan en hij geeft jouw een ruppee")
+        player_rupee_amount += 1
+    elif dobbelsteen_uitkomst < 7:
+        player_health -= 1
+        print(f"dat is nou jammer een {dobbelsteen_uitkomst} en hij steekt jouw in je zij een verdwijnt")
+        
     # === [kamer 3] === #
-
+    print("je loopt door en")
     print('Je stapt een hele lange kamer binnen.')
     print(f'In deze kamer staat een tafel met daarop een bord waarop staat zwaard en schild te koop.')
     print(f'Achter het bord staat een goblin die aan jouw vraagt of jij iets zou willen kopen.')
@@ -120,7 +157,7 @@ else:
     if player_rupee_amount == 1:
         shop_items_keuze = input("typ: (schild) of (zwaard) of (geen) als je geen wapen wilt kopen")
     else:
-        shop_items_keuze = input("typ: (schild) of (zwaard) of (bijde) of (geen) als je geen wapen wilt kopen")
+        shop_items_keuze = input("typ: (schild) of (zwaard) of (beide) of (geen) als je geen wapen wilt kopen\n")
     
     print('Op naar de volgende deur.')
     print('')
