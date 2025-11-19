@@ -75,6 +75,8 @@ if deur_keuze1 == "1":
             player_health -= zombie_attack * player_attack_amount
             print(f'In {player_attack_amount} rondes versla je de zombie.')
             print(f'Je health is nu {player_health}.')
+            print("de zombie dropt een rupee")
+            player_attack_amount += 1
         else:
             print('Helaas is de zombie te sterk voor je.')
             print('Game over.')
@@ -100,6 +102,20 @@ if deur_keuze1 == "1":
     elif dobbelsteen_uitkomst < 7:
         player_health -= 1
         print(f"dat is nou jammer een {dobbelsteen_uitkomst} en hij steekt jouw in je zij een verdwijnt")
+
+        # === [kamer 9] === #
+        altaar_lijst =["schild"," hart "]
+        altaar_kans = random.choice (altaar_lijst)
+    print("je stapt een donkere kamer binnen met een altaar in het midden dat licht geeft")
+    print("je legt jouw hand op het altaar en het begint heftiger te schijnen ")
+    print(f"er begint een vorm van een {altaar_kans} te vormen op het altaar ")
+    if altaar_kans == "schild":
+        print("je wordt betoverd en jouw defense is verhoogd")
+        player_defense += 1
+    else:
+        print("je wordt betoverd en jouw gezondheid is verhoogd")
+
+
 
 
         # === [kamer 3] === #
@@ -168,6 +184,19 @@ else:
     elif dobbelsteen_uitkomst < 7:
         player_health -= 1
         print(f"dat is nou jammer een {dobbelsteen_uitkomst} en hij steekt jouw in je zij een verdwijnt")
+
+        # === [kamer 9] === #
+        altaar_lijst =["schild"," hart "]
+        altaar_kans = random.choice (altaar_lijst)
+    print("je stapt een donkere kamer binnen met een altaar in het midden dat licht geeft")
+    print("je legt jouw hand op het altaar en het begint heftiger te schijnen ")
+    print(f"er begint een vorm van een {altaar_kans} te vormen op het altaar ")
+    if altaar_kans == "schild":
+        print("je wordt betoverd en jouw defense is verhoogd")
+        player_defense += 1
+    else:
+        print("je wordt betoverd en jouw gezondheid is verhoogd")
+
         
     # === [kamer 3] === #
 print('Je stapt een hele lange kamer binnen.')
