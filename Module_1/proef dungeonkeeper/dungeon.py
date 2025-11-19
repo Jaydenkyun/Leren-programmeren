@@ -76,7 +76,7 @@ if deur_keuze1 == "1":
             print(f'In {player_attack_amount} rondes versla je de zombie.')
             print(f'Je health is nu {player_health}.')
             print("de zombie dropt een rupee")
-            player_attack_amount += 1
+            player_rupee_amount +=1
         else:
             print('Helaas is de zombie te sterk voor je.')
             print('Game over.')
@@ -105,8 +105,8 @@ if deur_keuze1 == "1":
         time.sleep(1)
 
         # === [kamer 9] === #
-        altaar_lijst =["schild"," hart "]
-        altaar_kans = random.choice(altaar_lijst)
+    altaar_lijst =["schild"," hart "]
+    altaar_kans = random.choice(altaar_lijst)
     print("je stapt een donkere kamer binnen met een altaar in het midden dat licht geeft")
     print("je legt jouw hand op het altaar en het begint heftiger te schijnen ")
     print(f"er begint een vorm van een {altaar_kans} te vormen op het altaar ")
@@ -188,17 +188,17 @@ else:
         time.sleep(1)
 
         # === [kamer 9] === #
-        altaar_lijst =["schild"," hart "]
-        altaar_kans = random.choice (altaar_lijst)
-    print("je stapt een donkere kamer binnen met een altaar in het midden dat licht geeft")
-    print("je legt jouw hand op het altaar en het begint heftiger te schijnen ")
-    print(f"er begint een vorm van een {altaar_kans} te vormen op het altaar ")
-    if altaar_kans == "schild":
-        print("je wordt betoverd en jouw defense is verhoogd")
-        player_defense += 1
-    else:
-        print("je wordt betoverd en jouw gezondheid is verhoogd")
-    time.sleep(1)
+altaar_lijst =["schild"," hart "]
+altaar_kans = random.choice (altaar_lijst)
+print("je stapt een donkere kamer binnen met een altaar in het midden dat licht geeft")
+print("je legt jouw hand op het altaar en het begint heftiger te schijnen ")
+print(f"er begint een vorm van een {altaar_kans} te vormen op het altaar ")
+if altaar_kans == "schild":
+    print("je wordt betoverd en jouw defense is verhoogd")
+    player_defense += 1
+else:
+    print("je wordt betoverd en jouw gezondheid is verhoogd")
+time.sleep(1)
 
         
     # === [kamer 3] === #
