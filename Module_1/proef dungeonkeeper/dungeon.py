@@ -60,7 +60,8 @@ if deur_keuze1 == "1":
 
 
     if deur_keuze2 == "1":
-    # === [kamer 6] === #
+
+        # === [kamer 6] === #
         zombie_attack = 1
         zombie_defense = 0
         zombie_health = 2
@@ -90,93 +91,8 @@ if deur_keuze1 == "1":
             exit()
 
         print("je kijkt even rond na dat jij de zombie had verslagen")
-        print("je ziet een deur voor je en een deur rechts van je")
-        deur_keuze_zombiekamer = input("neem jij de deur (voor) je of neem jij de deur (rechts) van je")
-        if deur_keuze_zombiekamer == "voor":
-                # === [kamer 3] === #
-            print('Je stapt een hele lange kamer binnen.')
-            print(f'In deze kamer staat een tafel met daarop een bord waarop staat zwaard en schild te koop.')
-            print(f'Achter het bord staat een goblin die aan jouw vraagt of jij iets zou willen kopen.')
-            print("je krijgt de kans om wat te komen van jouw ene rupee en toevallig kost het zwaard een rupee en het schild een rupee dus je krijgt de keus: koop jij het zwaard? koop jij het schild? of koop je helemaal niets en loop je door?")
-            if player_rupee_amount == 0:
-              print("het zit er naaruit dat jij geeen rupees hebt en dus ook niets kunt kopen")
+        print("je ziet een deur voor je en een deur rechts")
 
-            elif player_rupee_amount == 1:
-               shop_items_keuze = input("typ: (schild) of (zwaard) of (geen) als je geen wapen wilt kopen")
-            elif player_rupee_amount == 2:
-                shop_items_keuze = input("typ: (schild) of (zwaard) of (zwaard en schild) of (sleutel) of (geen) als je geen wapen wilt kopen")
-            elif player_rupee_amount == 3:
-              shop_items_keuze = input("typ: (schild) of (zwaard) of (zwaard en schild) of (sleutel) of (geen) als je geen wapen wilt kopen")
-            elif player_rupee_amount == 4:
-              shop_items_keuze = input("typ: (schild) of (zwaard) of (zwaard en schild) of (sleutel) of (alles) of (geen) als je geen wapen wilt kopen")
-    
-            print('Op naar de volgende deur.')
-            print('')
-            time.sleep(1)
-
-            if shop_items_keuze == "schild":
-                player_rupee_amount -= 1
-                player_defense += 1
-            elif shop_items_keuze == "zwaard":
-                player_rupee_amount -= 1
-                player_attack += 2
-            elif shop_items_keuze == "beide":
-                player_rupee_amount -= 2
-                player_defense += 1
-                player_attack_amount += 2
-            elif shop_items_keuze == "sleutel":
-                player_rupee_amount -= 2
-                sleutel = True
-            elif shop_items_keuze == "alles":
-                player_rupee_amount -=4
-                player_defense += 1
-                player_attack_amount +=2
-                sleutel = True
-            else:
-                shop_items_keuze == "geen"
-                player_attack += 0
-            print("je koopt niets en bent nu officieël een jood")
-            time.sleep(1)
-
-                # === [kamer 4] === #
-
-            boss_attack = 2
-            boss_defense = 0
-            boss_health = 3
-            print(f'Dapper loop je de kamer binnen met je nieuwe {shop_items_keuze}.')
-            print('Je ziet de dungeon boss staan.')
-
-            boss_hit_damage = (boss_attack - player_defense)
-            if boss_hit_damage <= 0:
-                print('Jij hebt een te goede verdedigign voor de boss, hij kan je geen schade doen.')
-            else:
-                boss_attack_amount = math.ceil(player_health / boss_hit_damage)
-    
-            player_hit_damage = (player_attack - boss_defense)
-            player_attack_amount = math.ceil(boss_health / player_hit_damage)
-
-            if player_attack_amount < boss_attack_amount:
-                player_health -= boss_attack * player_attack_amount
-                print(f'In {player_attack_amount} rondes versla je de boss.')
-                print(f'Je health is nu {player_health}.')
-            else:
-                print('Helaas is de boss te sterk voor je.')
-                print('Game over.')
-                print("titel einde")
-                exit()
-                print('')
-            time.sleep(1)
-
-
-            # === [kamer 5] === #
-            print('Voorzichtig open je de deur, je wilt niet nog een zombie tegenkomen.')
-            print('Tot je verbazig zie je een schatkist in het midden van de kamer staan.')
-            print('Je loopt er naartoe.')
-
-            if sleutel == True:
-                print ("je opent de kist en je hebt gewonnen!!!")
-            else:
-                print ("je hebt geen sleutel dus je kan de kist niet openen en ook niet winnen")
 
     # === [kamer 8] === #
     dobbelsteen_uitkomst = random.randint(2,12)
@@ -198,7 +114,7 @@ if deur_keuze1 == "1":
     elif dobbelsteen_uitkomst < 7:
         player_health -= 1
         print(f"dat is nou jammer een {dobbelsteen_uitkomst} en hij steekt jouw in je zij een verdwijnt")
-    time.sleep(1)
+        time.sleep(1)
 
 
         # === [kamer 9] === #
