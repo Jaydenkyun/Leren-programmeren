@@ -117,8 +117,12 @@ if deur_keuze1 == "2" or deur_keuze6 != "1" or deur_keuze2 != "1":
         print(f"Je rolt een {dobbelsteen_uitkomst}. en  Je krijgt een rupee.")
         player_rupee_amount += 1
     else:
-        print(f"Je rolt een {dobbelsteen_uitkomst}. De goblin steekt je!")
+        print(f"Je rolt een {dobbelsteen_uitkomst}. De goblin steekt je en verdwijnt!")
     player_health -= 1
+    if player_health == 0:
+        print("je bent neergestoken")
+        print("game over")
+        exit()
     print("je loopt verder")
     print("Je ziet twee deuren:")
     print("Typ (1) voor kamer 9.")
@@ -236,6 +240,3 @@ if deur_keuze1 == "2" or deur_keuze6 != "1" or deur_keuze2 != "1":
         print("titel einde: sleutel vergeten")
 
     exit()
-
-
-
