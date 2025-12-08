@@ -6,8 +6,13 @@
 coinValues = [50,20,10,5,2,1] #
 
 toPay = int(float(input('Amount to pay: '))* 100) #
+
+
 paid = int(float(input('Paid amount: ')) * 100) #
+
+
 change = paid - toPay #
+
 
 while change > 0 and len(coinValues) > 0: #
 
