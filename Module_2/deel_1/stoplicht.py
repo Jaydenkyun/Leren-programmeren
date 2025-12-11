@@ -1,26 +1,14 @@
 import time
 stoplicht = True
 kleur = "rood"
-tijd_rood = 1
-lengte = 30
-tijd_groen = 1
-
+tijd = 1
 while stoplicht == True:
-    print (kleur)
-    if kleur == "rood":
-        tijd_rood +=1
-        time.sleep(1)
-
-    elif tijd_rood == 30:
-        tijd_rood = 1
+    if tijd > 20:
         kleur = "groen"
-        print(kleur)
-        tijd_groen +=1
-
-    elif tijd_groen == 30:
-        tijd_groen = 1
+    if tijd > 50:
         kleur = "oranje"
-        print(kleur)
-        tijd_oranje +=1
-
-    
+    if tijd == 60:
+        tijd = 0
+    print(kleur)
+    time.sleep(1)
+    tijd += 1

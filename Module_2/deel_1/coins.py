@@ -24,7 +24,4 @@ while change > 0 and len(coinValues) > 0: #
     nrCoinsReturned = int(input('How many coins of ' + str(coinValue) +  ' cents did you return? ')) #
     change -= nrCoinsReturned * coinValue #
 
-if change > 0: #
-  print('Change not returned: ', str(change) + ' cents') #
-else:
-  print('done')
+  
