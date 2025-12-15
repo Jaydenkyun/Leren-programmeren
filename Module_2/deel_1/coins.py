@@ -4,7 +4,6 @@ toPay = int(float(input('Amount to pay: ')) * 100) #de bedragen invullen en omze
 paid = int(float(input('Paid amount: ')) * 100)  #de bedragen invullen en omzetten naar centen
 change = paid - toPay
 
-
 returnedCoins = {} # Dictionary voor overzicht van teruggegeven munten, want die worden hier dan zo toegevoegd
 
 
@@ -12,7 +11,6 @@ returnedCoins = {} # Dictionary voor overzicht van teruggegeven munten, want die
 while change > 0 and len(coinValues) > 0: #len geeft aan hoeveel verschillende dingen in de lijst staan
     coinValue = coinValues.pop(0) #pop verwijderd het eerste ding uit de lijst zodat hij niet nog een keer langs hoeft te komen
     nrCoins = change // coinValue
-
     if nrCoins > 0:
         print('Return maximal', nrCoins, 'coins of', coinValue, 'cents!') # printje om voor de gebruiker duidelijk te maken hoeveel jij van deze euro of centen terug kan geven
         nrCoinsReturned = int(input('How many coins of ' + str(coinValue) + ' cents did you return? ')) # input voor hoeveel geld jij van deze soort heb je
