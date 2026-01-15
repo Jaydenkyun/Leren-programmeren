@@ -9,6 +9,7 @@ while stoplicht == True:
         kleur = "oranje"
     if tijd == 60:
         tijd = 0
+        kleur = "rood"
     print(kleur)
     time.sleep(1)
     tijd += 1
