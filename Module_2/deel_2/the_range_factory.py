@@ -1,3 +1,4 @@
-hoeveel = str(input("hoeveel lijstjes wilt u?"))
-for hoelang in hoeveel:
-    hoelang = input(f"hoelang moet lijstje {hoeveel} zijn?")
+aantal = str(input("hoeveel lijstjes wilt u?"))
+for lengte in aantal:
+    lengte = input(f"hoelang moet lijstje {aantal} zijn?")
+    print(aantal)
