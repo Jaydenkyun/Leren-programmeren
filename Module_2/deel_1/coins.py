@@ -20,7 +20,7 @@ while change > 0 and len(coinValues) > 0: #len geeft aan hoeveel verschillende d
 
         change -= nrCoinsReturned * coinValue # wisselgeld minder maken
 
-print("\n--- teruggeven van de munten overzicht ---")
+print("\nteruggeven van de munten overzicht")
 for coin, amount in returnedCoins.items():        # Overzicht printen na de loop
     print(f"{coin} cent: {amount} munt(en) teruggegeven")
 

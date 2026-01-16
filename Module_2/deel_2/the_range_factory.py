@@ -1,4 +1,14 @@
-aantal = str(input("hoeveel lijstjes wilt u?"))
-for lengte in aantal:
-    lengte = input(f"hoelang moet lijstje {aantal} zijn?")
-    print(aantal)
+aantal = int(input("Hoeveel lijstjes wil je? "))
+
+alles = []
+tekst = ""
+
+for i in range(aantal):
+    invoer = int(input(f"Geef waarden voor lijstje {i+1} (gescheiden door komma): "))
+    for j in (range(invoer)):
+        tekst += str(j) + ","
+
+    lijstje = invoer
+    alles.append(tekst)
+    tekst = ""
+print(alles)
