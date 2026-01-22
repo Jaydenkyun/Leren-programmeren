@@ -4,7 +4,7 @@ alles = []
 tekst = ""
 
 for i in range(aantal):
-    invoer = int(input(f"Geef waarden voor lijstje {i+1} (gescheiden door komma): "))
+    invoer = int(input(f"Geef waarden voor lijstje {i+1} "))
     for j in (range(invoer)):
         tekst += str(j) + ","
 
