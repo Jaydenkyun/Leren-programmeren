@@ -5,4 +5,3 @@ for timer in range(30, 0, -1):
     time.sleep(1)
     if timer == 1:
         print("lancering!!!")
-    

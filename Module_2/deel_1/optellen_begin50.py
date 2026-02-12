@@ -11,5 +11,3 @@ while totaal <= 1000:
     regel += (f" + {getal}")
 
     
-    
-    
