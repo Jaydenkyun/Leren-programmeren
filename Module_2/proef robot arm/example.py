@@ -5,8 +5,9 @@ from challenges.example import challenges
 
 # load the robotarm with a challenge on a level (max 3)
 robotArm = RobotArm(challenges[5],0)
-
+robotArm.help()
 # your code starts here:
+
 
 
 
@@ -16,9 +17,9 @@ robotArm = RobotArm(challenges[5],0)
 robotArm.report()
 
 # want help? Unlock code below!
-#robotArm.help()
+robotArm.help()
 
 # want to inspect a solution? Unlock code below!
-# robotArm.showSolution()
+robotArm.showSolution()
 robotArm.wait()
 
