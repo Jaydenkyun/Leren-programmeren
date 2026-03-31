@@ -1,0 +1,6 @@
+# robotArm.moveRight()
+# robotArm.moveRight()
+# robotArm.grab()
+# robotArm.moveLeft()
+# robotArm.moveLeft()
+# robotArm.drop()
