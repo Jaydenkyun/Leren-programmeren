@@ -23,7 +23,19 @@ elif functie == "B":
     print(f"{functie} getallen aftrekken")
     n1 = input("welk getal?")
     n2 = input(f"welk getal wil je aftrekken van {n1}\n")
-    print(function.addition(n1, n2))
+    print(functions.subtraction(n1, n2))
+
+elif functie == "C":
+    print(f"{functie} getallen vermenigvuldigen")
+    n1 = input("welk getal?")
+    n2 = input(f"welk getal wil je vermenigvuldigen met {n1}\n")
+    print(functions.multiplication(n1, n2))
+
+elif functie == "D":
+    print(f"{functie} getallen delen")
+    n1 = input("welk getal?")
+    n2 = input(f"welk getal wil je delen van {n1}\n")
+    print(functions.devision(n1, n2))
 
     
 #elif functie == "C":
