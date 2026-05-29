@@ -1,0 +1,35 @@
+import time
+
+print("je bent een soldaat in een middeleeuwse oorlog en je bent uitgekozen om te vechten voor jouw staat")
+print("je hebt gekregen een zwaard en harnas")
+time.sleep(1)
+print("morgen mag je vertrekken voor je eerste gevecht (en laatste als je het niet overleeft)")
+time.sleep(1)
+print("het is de volgende dag en je staat tegenover de oppositie je maakt je klaar in positie")
+print("jouw commander scheeuwt CHARGE en jij rent het front")
+time.sleep(2)
+print("terwijl jij naar het front aan het rennen bent realiseer jij charge? dat is Engels")
+print("het blijkt dus dat in jouw tocht naar het front jij en een andere soldaat in het verkeerde leger zijn gekomen")
+time.sleep(1)
+print("wat ga je nu doen? je oud Engels is redelijk")
+print("ga je: vechten voor de Engelsen, snel van kant switchen, of van binnenuit het leger waar je nu in staat van binnenuit slachten?")
+vrg1 = input(" kies uit: engelsen, switchen, binnenuit")
+if vrg1 == ("binnenuit"):
+    print("je doet alsof je bezig bent met aanmoedigen en staat stil je zwaar in de lucht te zwaaien.")
+    print("zodra je ziet dat veel van de soldaten al diep in het front zit steek je je zwaard in een van de soldaten")
+    time.sleep(1)
+    print("het was alles behalve fataal en de soldaat draait om en roept TRAITOR")
+    print("vervolgens word je van 6 kanten gestoken en jouw ingewanden druipen eruit")
+    time.sleep(1)
+    print("EINDE naam: jij wel Tarzan")
+    exit()
+if vrg1 == ("engelsen"):
+    print("je vecht voor de Engelsen")
+    print("je ziet twee soldaten voor je de soldaat links zit helemaal onder bloed en aan zijn zwaard zitten ingewanden hij seint naar jouw om te vechten")
+    print("de soldaat rechts zit te huilen naast zijn maat die zijn nieren vast heeft")
+    vrg1_en = input("welke wordt het links of rechts")
+    if vrg1_en == "links":
+        print("domme keuze je keel wordt opengesneden in een slag")
+        print("EINDE naam: leuk geprobeerd")
+        exit()
+    else: 
