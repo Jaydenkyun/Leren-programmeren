@@ -12,6 +12,7 @@ print("H) getallen halveren")
 print("I) niets")
 functie = input("kies:")
 if functie == "I":
+    print("einde berekening")
     exit()
 elif functie == "A":
     print(f"{functie} getallen optellen")
@@ -36,11 +37,31 @@ elif functie == "D":
     n1 = input("welk getal?")
     n2 = input(f"welk getal wil je delen van {n1}\n")
     print(functions.devision(n1, n2))
+
+elif functie == "E":
+    print(f"{functie} getal ophogen")
+    n1 = input("welk getal?")
+    n2 = input(f"met hoeveel wil je het getal {n1} ophogen\n")
+    if n2 == "":
+        n2 = "1"
+    print(functions.addition(n1, n2))
+
+elif functie == "F":
+    print(f"{functie} getal verlagen")
+    n1 = input("welk getal?")
+    n2 = input(f"met hoeveel wil je het getal {n1} verlagen\n")
+    if n2 == "":
+        n2 = "1"
+    print(functions.subtraction(n1, n2))
+
+elif functie == "G":
+    print(f"{functie} getallen verdubbelen")
+    n1 = input("welk getal?")
+    n2 = 2
+    print(functions.devision(n1, n2))
     
-#elif functie == "E":
-    
-#elif functie == "F":
-    
-#elif functie == "G":
-    
-#elif functie == "H":
+elif functie == "H":
+    print(f"{functie} getallen halveren")
+    n1 = input("welk getal?")
+    n2 = 2
+    print(functions.devision(n1, n2))
