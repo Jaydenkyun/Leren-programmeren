@@ -20,7 +20,11 @@ elif functie == "A":
     print(functions.addition(n1, n2))
    
 elif functie == "B":
-    print("welk getal?")
+    print(f"{functie} getallen aftrekken")
+    n1 = input("welk getal?")
+    n2 = input(f"welk getal wil je aftrekken van {n1}\n")
+    print(function.addition(n1, n2))
+
     
 #elif functie == "C":
     
