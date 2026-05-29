@@ -36,11 +36,6 @@ elif functie == "D":
     n1 = input("welk getal?")
     n2 = input(f"welk getal wil je delen van {n1}\n")
     print(functions.devision(n1, n2))
-
-    
-#elif functie == "C":
-    
-#elif functie == "D":
     
 #elif functie == "E":
     
