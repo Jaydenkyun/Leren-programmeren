@@ -11,7 +11,7 @@ print("G) getallen verdubbelen")
 print("H) getallen halveren")
 print("I) niets")
 functie = input("kies:")
-if functie == "I":
+if functie == "I" or "":
     print("einde berekening")
     exit()
 elif functie == "A":
