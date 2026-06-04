@@ -14,7 +14,7 @@ while True:
         functie = input("kies:").upper()
         if functie in ["A", "B", "C", "D", "E", "F", "G", "H", "I"]:
             break
-        elif functie not in ["A", "B", "C", "D", "E", "F", "G", "H", "I"]:
+        else:
             print("voer een van de voorgestelde letters in")
 
     if functie == "I" or functie == "":
