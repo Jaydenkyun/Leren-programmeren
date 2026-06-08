@@ -10,7 +10,7 @@ from config import JOURNEY_IN_DAYS
 
 # TODO: Schrijf hieronder de test van opdracht 4
 
-test("JOURNEY_IN_DAYS", JOURNEY_IN_DAYS, 10)
+test("JOURNEY_IN_DAYS", JOURNEY_IN_DAYS, 11)
 
 
 # Niets hieronder aanpassen
