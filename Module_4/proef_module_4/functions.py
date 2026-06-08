@@ -60,10 +60,8 @@ def getAdventuringFriends(friends:list) -> list:
 
 ##################### O07 #####################
 
-def getNumberOfHorsesNeeded(people:int) -> int:
-    if people <= 2:
-        return 0
-    return math.ceil((people - 2) / 2)
+def getNumberOfHorsesNeeded(numberOfPeople):
+    return math.ceil(numberOfPeople / 2)
 
 def getNumberOfTentsNeeded(people:int) -> int:
     return math.ceil(people / 3)

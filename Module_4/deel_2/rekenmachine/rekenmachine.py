@@ -1,4 +1,5 @@
 import functions 
+first_round = True
 while True:
     print("wat wilt u doen?")
     print("A) optellen")
@@ -21,13 +22,17 @@ while True:
         print("einde berekening")
         exit()
 
+    if first_round:
+        while True:
+            try:
+                n1 = float(input("welk getal?"))
+                break
+            except ValueError: 
+                print("voer getal 1 in in")
+        first_round = False
+    else:
+        n1 = answer
 
-    while True:
-        try:
-            n1 = float(input("welk getal?"))
-            break
-        except ValueError: 
-            print("voer getal 1 in in")
     while True:
         try:   
             n2 = float(input("voer getal 2 in"))
@@ -37,7 +42,7 @@ while True:
 
     if functie == "A":
         print(f"{functie} getallen optellen")
-        print(functions.addition(n1, n2))
+        answer = functions.addition(n1, n2)
     
     elif functie == "B":
         print(f"{functie} getallen aftrekken")
@@ -70,6 +75,4 @@ while True:
     elif functie == "H":
         print(functions.devision(n1, n2))
 
-    doorgaan = input("wil je nog meer berekeningen doen? typ: ja of nee")
-    if doorgaan == ("nee").upper():
-        break
+    print(f"uikomst = {answer}")
