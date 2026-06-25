@@ -95,7 +95,7 @@ def getItemsAsText(items:list) -> str:
     return ", ".join(texts[:-1]) + f" & {texts[-1]}"
 
 def getItemsValueInGold(items:list) -> float:
-    total = 0
+    total = 0.0
 
     for item in items:
         amount = item["amount"]
@@ -113,27 +113,50 @@ def getItemsValueInGold(items:list) -> float:
         elif currency == "platinum":
             total += platinum2gold(value)
 
-    return round(total, 2)
+    return float(round(total, 2))
 
 ##################### O09 #####################
 
 def getCashInGoldFromPeople(people:list) -> float:
-    pass
+    total = 0.0
+
+    for person in people:
+        total += getPersonCashInGold(person["cash"])
+
+    return round(total, 2)
 
 ##################### O10 #####################
 
 def getInterestingInvestors(investors:list) -> list:
-    pass
+    result = []
+
+    for investor in investors:
+        if investor["profitReturn"] < 10:
+            result.append(investor)
+
+    return result
+
 
 def getAdventuringInvestors(investors:list) -> list:
-    pass
+    interesting = getInterestingInvestors(investors)
+
+    return getFromListByKeyIs(interesting, "adventuring", True)
+
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
-    pass
+    adventuringInvestors = getAdventuringInvestors(investors)
 
+    if len(adventuringInvestors) == 0 or len(gear) == 0:
+        return 0.0
+
+    return round(
+        (getItemsValueInGold(gear) + 18.54)
+        * len(adventuringInvestors),
+        2
+    )
 ##################### O11 #####################
 
-def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int:
+def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> float:
     pass
 
 def getJourneyInnCostsInGold(nightsInInn:int, people:int, horses:int) -> float:
