@@ -156,23 +156,49 @@ def getTotalInvestorsCosts(investors:list, gear:list) -> float:
     )
 ##################### O11 #####################
 
-def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> float:
-    pass
+def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int:
+    nights = 0
+
+    while getJourneyInnCostsInGold(nights + 1, people, horses) <= leftoverGold:
+        nights += 1
+
+    return nights
+
 
 def getJourneyInnCostsInGold(nightsInInn:int, people:int, horses:int) -> float:
-    pass
+    humanCost = silver2gold(
+        nightsInInn * people * COST_INN_HUMAN_SILVER_PER_NIGHT
+    )
+
+    horseCost = copper2gold(
+        nightsInInn * horses * COST_INN_HORSE_COPPER_PER_NIGHT
+    )
+
+    return round(humanCost + horseCost, 2)
+
+
 
 ##################### O13 #####################
 
 def getInvestorsCuts(profitGold:float, investors:list) -> list:
-    pass
+    cuts = []
 
-def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:int) -> float:
-    pass
+    for investor in getInterestingInvestors(investors):
+        cuts.append(round(profitGold * investor["profitReturn"] / 100, 2))
+
+    return cuts
+
+def getAdventurerCut(profitGold: float, investorsCuts: list, fellowship: int) -> float:
+    leftover = profitGold - sum(investorsCuts)
+
+    if leftover < 0:
+        return 0.0
+
+    return round(leftover / fellowship, 2)
 
 ##################### O14 #####################
 
-def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
+def getEarnings(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
     pass
 
 ##################### view functions #####################
